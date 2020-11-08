@@ -1,1 +1,15 @@
 This is the walkthrough for EKS and kubernetes cluster setup:
+
+Pre-requisite:
+An EKS cluster created with the help of Terraform OR CloudFormationTemplate in order to integrate the infrastructure as a code as a part of CICD pipeline.
+A Jump server from which the yamls can be executed to create the deployment and it's supporting infrastructure and netwroks.
+
+Information:
+This deployment is configured in such a way that 'mediawiki' app can be automatically deployed as a part of CICD automation
+Also this deployment is configured in such a way that when load on a application increases it will automatically scale horizontally.
+
+Steps:
+Deploy sservice.yml first in order to create the network and expose the port required by POD;
+Deploy the Deployment.yml, this will create the POD in EKS cluster node with specified image 
+Deploy hpa.yml in order to make this app deployment horizonatlly scalable in case of increased load.
+
