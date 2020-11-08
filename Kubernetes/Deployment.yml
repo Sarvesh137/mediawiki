@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mediawiki-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mediawiki-app
+  template:
+    metadata:
+      labels:
+        app: mediawiki-app
+    spec:
+      containers:
+      - name: mediawiki-app
+        image: index.docker.io/DOCKER_USER/PRIVATE_REPO_NAME:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        resources:
+            limits:
+              cpu: "0.5"
+            requests:
+              cpu: "0.25"
+              
+              
+             
