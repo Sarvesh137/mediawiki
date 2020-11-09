@@ -1,0 +1,12 @@
+
+- name: Build image and with buildargs
+  docker_image:
+     path: ./Dockerfile
+     name: sarvesh137/mediawiki
+
+- name: Tag and push to docker hub
+  docker_image:
+    name: sarvesh137/mediawiki
+    repository: docker.io/sarvesh137/mediawiki
+    tag: latest
+    push: yes
