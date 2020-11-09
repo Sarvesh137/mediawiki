@@ -1,1 +1,3 @@
-
+Two Dockerfiles are saperately created for Database and Application
+Using these docker files, Docker image will be built which will be then uploaded to DockerHUB using ansible script
+Those image links will be used in Kubernetes Deployment file to deploy the Pods in Cluster
