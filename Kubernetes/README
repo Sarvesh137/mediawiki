@@ -1,5 +1,8 @@
 This is the walkthrough for EKS and kubernetes cluster setup:
 
+NOTE: Assuming that EKS cluster is already been set using CFT or terraform with proper IAM role and configurations for kubernetes deployment
+Also below steps need to be followed differently for DB as well as App PODS deployments
+
 Pre-requisite:
 An EKS cluster created with the help of Terraform OR CloudFormationTemplate in order to integrate the infrastructure as a code as a part of CICD pipeline.
 A Jump server from which the yamls can be executed to create the deployment and it's supporting infrastructure and netwroks.
