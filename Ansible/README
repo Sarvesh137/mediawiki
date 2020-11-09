@@ -1,1 +1,6 @@
+Pre-requisites:
+Ansible master server configured with Docker server so that ansbible scrips can be fired 
+Also ansible server connectivity to DockerHub needs to be configured to push the image
 
+This is the Ansible script to build and create the docker image from the Dockerfile
+Also this will push the newly created image automatically to DockerHub
