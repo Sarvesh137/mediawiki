@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mediawiki-app
+  name: mediawiki-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mediawiki-app
+      app: mediawiki-db
   template:
     metadata:
       labels:
-        app: mediawiki-app
+        app: mediawiki-db
     spec:
       containers:
-      - name: mediawiki-app
+      - name: mediawiki-db
         image: image: docker.io/sarvesh137/mediawiki
         imagePullPolicy: Always
         ports:
