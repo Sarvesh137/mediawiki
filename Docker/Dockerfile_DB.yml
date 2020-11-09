@@ -1,0 +1,13 @@
+FROM sarvesh137/mediawiki
+MAINTAINER sarvesh@gmai.com
+# Copy props into container
+ENTRYPOINT exec /etc/init.d/mysqld start \
+           && mysql_secure_installation \
+           && mysql_secure_installation \
+           && mysql –u root –p \
+           && CREATE USER 'wiki' IDENTIFIED BY 'wiki123'; \
+           && CREATE DATABASE wikidatabase; \
+           && GRANT ALL PRIVILEGES ON wikidatabase.* TO 'wiki'; \
+           && exit; \
+           && chkconfig –-level 35 httpd on \
+           && chkconfig –-level 35 mysqld on 
