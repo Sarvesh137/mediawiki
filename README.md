@@ -1,6 +1,9 @@
 This application deployment is designed, built and configured in such a way that every part of it can be used in CICD pipeline automation
 Also the deployment is done in such a way that it can horizontally scale in case of failure or excessive loads
 
+As requested: This deployment is scalable with the rolling Update strategy and compatible with the CICD automation.
+Refer respective screenshots and README
+
 Tools used:
 
 Docker: for containerization and build image
