@@ -1,0 +1,15 @@
+FROM sarvesh137/mediawiki
+MAINTAINER sarvesh@gmai.com
+
+# Pre-requisites
+ENTRYPOINT exec su -c 'rpm -Uvh https://download.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm' \
+    && yum install MediaWiki 1.27  \
+    && WORKDIR /var/www \  
+    && ln -s mediawiki-1.35.0/ mediawiki \
+    && chown -R apache:apache /var/www/mediawiki \
+    && service httpd restart \
+    && sudo firewall-cmd --permanent --zone=public --add-service=http \
+    && sudo firewall-cmd --permanent --zone=public --add-service=https \
+    && sudo systemctl restart firewalld  
+# Ports used by the app
+EXPOSE $serverPort
