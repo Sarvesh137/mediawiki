@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mediawiki-app
-        image: index.docker.io/DOCKER_USER/PRIVATE_REPO_NAME:latest
+        image: image: docker.io/sarvesh137/mediawiki
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
