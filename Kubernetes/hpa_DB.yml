@@ -11,4 +11,4 @@ spec:
     apiVersion: extensions/v1
     kind: Deployment
     name: mediawiki-db
-  targetCPUUtilizationPercentage: 1
+  targetCPUUtilizationPercentage: 50
