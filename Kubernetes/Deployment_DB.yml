@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mediawiki-db
-        image: image: docker.io/sarvesh137/mediawiki
+        image: docker.io/sarvesh137/mediawiki
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
